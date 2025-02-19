@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nouman School - Official Website</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-abs-1.png"
+      media="min-width(768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-abs-2.png"
+      media="min-width(768px)"
+    />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <h1>
+          <a href="#" class="logo">🖇PĐP 📚 Hight School</a>
+        </h1>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">Nouman School</a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="Close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link" data-nav-toggler>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link" data-nav-toggler>Thông tin</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#benefits" class="navbar-link" data-nav-toggler
+                >Lợi ích</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="#classes" class="navbar-link" data-nav-toggler
+                >Hoạt động</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="menu/a2.html" class="navbar-link" data-nav-toggler target="_blank"
+                >Kỉ Niệm </a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="header-action-btn"
+            aria-label="Open search"
+            data-search-toggler
+          >
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <a
+            href="menu/form.html"
+            class="header-action-btn login-btn"
+            target="_blank"
+          >
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+            <span class="span">ĐĂNG KÝ NGAY</span>
+          </a>
+
+          <button
+            class="header-action-btn nav-open-btn"
+            aria-label="Open menu"
+            data-nav-toggler
+          >
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <!-- 
+    - #SEARCH BOX
+  -->
+
+    <div class="search-container" data-search-box>
+      <div class="container">
+        <button
+          class="search-close-btn"
+          aria-label="Close search"
+          data-search-toggler
+        >
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <div class="search-wrapper">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Here..."
+            aria-label="Search"
+            class="search-field"
+          />
+
+          <button class="search-submit" aria-label="Submit" data-search-toggler>
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section
+          class="hero"
+          id="home"
+          aria-label="hero"
+          style="background-image: url('./assets/images/hero-bg.jpg')"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <p class="section-subtitle">Giới thiệu về ngôi trường</p>
+
+              <h2 class="h1 hero-title">THPT PHAN ĐÌNH PHÙNG</h2>
+
+              <p class="hero-text">
+                Trường THPT Phan Đình Phùng được thành lập từ ngày 01/4/2010 theo Quyết định UBND tỉnh Đăk Nông. Năm học 2009 – 2010 trường được tách ra từ trường THPT Đăk Song, ban đầu với một cơ ngơi thật khiêm tốn toàn trường chỉ có một dãy phòng bao gồm cả phòng học và phòng làm việc hành chính của nhà trường.
+
+Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương, trường đã chính thức đi vào hoạt động tuyển sinh năm học đầu tiên (năm học 2010 – 2011). Nhà trường đóng chân tại xã Đăk N’Drung, huyện Đăk Song, tỉnh Đăk Nông và ở nguyên vị trí cho đến ngày nay.
+              </p>
+
+              <a
+                href="https://web.facebook.com/profile.php?id=100066626396563"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                <span class="span">FANPAGE TRƯỜNG</span>
+
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </div>
+
+            <figure class="hero-banner">
+              <img
+                src="./assets/images/hero-banner.png"
+                width="500"
+                height="500"
+                loading="lazy"
+                alt="hero image"
+                class="w-100"
+              />
+
+              <img
+                src="./assets/images/hero-abs-1.png"
+                width="318"
+                height="352"
+                loading="lazy"
+                aria-hidden="true"
+                class="abs-img abs-img-1"
+              />
+
+              <img
+                src="./assets/images/hero-abs-2.png"
+                width="160"
+                height="160"
+                loading="lazy"
+                aria-hidden="true"
+                class="abs-img abs-img-2"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+        <section class="section about" id="about" aria-label="about">
+          <div class="container">
+            <figure class="about-banner">
+              <img
+                src="./assets/images/illustration.webp"
+                width="400"
+                height="500"
+                loading="lazy"
+                alt="about banner"
+                class="w-100 a`bout-img"
+              />
+
+              <img
+                src="./assets/images/illustration-2.avif"
+                width="188"
+                height="242"
+                loading="lazy"
+                aria-hidden="true"
+                class="abs-img abs-img-1"
+              />
+
+              <img
+                src="./assets/images/illus.avif"
+                width="150"
+                height="200"
+                loading="lazy"
+                aria-hidden="true"
+                class="abs-img abs-img-2"
+              />
+            </figure>
+
+            <div class="about-content">
+              <p class="section-subtitle">Phan Đình Phùng</p>
+
+              <h2 class="h2 section-title">Tiêu Chí Của Nhà Trường</h2>
+
+              <ul class="about-list">
+                <li class="about-item">
+                  <div class="item-icon item-icon-1">
+                    <img
+                      src="./assets/images/about-icon-1.png"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 class="h3 item-title">100% học sinh đậu tốt nghiệp THPT</h3>
+
+                    <p class="item-text">
+                      Hằng năm có hơn 98% học sinh đậu tốt nghiệp THPT
+                    </p>
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="item-icon item-icon-2">
+                    <img
+                      src="./assets/images/about-icon-2.png"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 class="h3 item-title">Chuẩn bị chu đáo cơ sở vật chất </h3>
+
+                    <p class="item-text">
+                      Trang bị các thiết bị hiện đại tiên tiến phục vụ việc dạy và học tốt nhất!
+                    </p>
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="item-icon item-icon-3">
+                    <img
+                      src="./assets/images/about-icon-3.png"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 class="h3 item-title">Đạt nhiều thanh tích cao trong tỉnh nhà</h3>
+
+                    <p class="item-text">
+                      Luôn đi đầu trong các kì thi như: Olympic, HSG, Quốc gia...
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <a
+                href="http://c3phandinhphung.daknong.edu.vn/"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                <span class="span">Website riêng</span>
+
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- 
+        - #CATEGORY
+      -->
+        <section class="section category" id="benefits" aria-label="category">
+          <div class="container">
+            <p class="section-subtitle">
+              Benefits of learning from PĐP Hight School
+            </p>
+
+            <h2 class="h2 section-title">
+              Bạn nhận được gì từ ngôi trường này???
+            </h2>
+
+            <ul class="grid-list">
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Phát triển cá nhân</a>
+                    </h3>
+
+                    <span class="card-meta">Phương pháp dạy tốt nhất</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="file-tray-full-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Lý thuyết đi đôi với Thực hành</a>
+                    </h3>
+
+                    <span class="card-meta">Phòng nghiên cứu hiện đại</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="color-palette-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Tham gia các câu lạc bộ</a>
+                    </h3>
+
+                    <span class="card-meta">Cầu lông, bóng đá, võ thuật...</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="layers-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Kỹ năng nâng cao</a>
+                    </h3>
+
+                    <span class="card-meta">Các lớp học rèn kỹ năng học sinh</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="laptop-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Trang thiết bị hiện đại</a>
+                    </h3>
+
+                    <span class="card-meta">Máy vi tính, TV, máy chiếu...</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="thumbs-up-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Đội ngũ giáo viên chất lượng</a>
+                    </h3>
+
+                    <span class="card-meta">Có kiến thức, kỹ năng cao</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="arrow-up"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">IQ-EQ tăng cao</a>
+                    </h3>
+
+                    <span class="card-meta">Phương pháp dạy học đặc biệt</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Môi trường hòa đồng, vui vẻ</a>
+                    </h3>
+
+                    <span class="card-meta">Chú trọng việc học và chơi cho hs</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="medkit-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Y tế </a>
+                    </h3>
+
+                    <span class="card-meta">Tay nghề cao, 24/7</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #COURSE
+      -->
+
+        <section
+          class="section course"
+          id="classes"
+          aria-label="course"
+          style="background-image: url('./assets/images/course-bg.jpg')"
+        >
+          <div class="container">
+            <p class="section-subtitle">Popular Classes</p>
+
+            <h2 class="h2 section-title">Hoạt động của nhà trường</h2>
+
+            <ul class="grid-list">
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/1.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="School Students"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">THPT PĐP</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">Đoàn trường</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >2024</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title"
+                        >Tổ chức hoạt động thể dục - thể thao</a
+                      >
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/2.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="School Students"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">THPT PĐP</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">Đoàn trường</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >2024</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Hỗ trợ người dân thoát nghèo</a>
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/3.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="School Students"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">THPT PĐP</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">Xã đoàn</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >2023</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title"
+                        >Thăm đài tưởng niệm anh hùng liệt sĩ</a
+                      >
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/4.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="School Students"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">THPT PĐP</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">Nhà hảo tâm</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >2023</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title"
+                        >Trao học bổng cho học sinh vượt khó</a
+                      >
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+                    </div>                    
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/5.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="School Students"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">THPT PĐP</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">Công an huyện</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >2025</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title"
+                        >Tập huấn an toàn gia thông</a
+                      >
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+                    </div>                 
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/6.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="School Students"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">THPT PĐP</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">Đoàn thanh niên</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >2025</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Dọn dẹp khuân viên trường học lớp học</a>
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+                    </div>
+                </div>
+              </li>
+            </ul>
+
+           <h1> <!-- class="btn btn-primary" -->
+              <span class="span">Xem thêm tại đây</span
+              >
+            </h1>
+              <ion-icon name="education-outline" aria-hidden="true"></ion-icon>
+            </a>
+            <iframe src="http://c3phandinhphung.daknong.edu.vn/chuyen-muc/tin-tuc-hoat-dong" height="450" width="100%" style=
+            "   
+            border: 4px solid #3498db; /* Viền màu xanh dương */
+            border-radius: 12px; /* Bo tròn góc */
+            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+            padding: 5px; /* Khoảng cách bên trong viền */
+            background: white; /* Màu nền để viền rõ ràng hơn */
+            " ></iframe>
+          </div>
+        </section>
+
+        <!-- 
+        - #CTA
+      -->
+
+        <section
+          class="section cta"
+          id="tuition"
+          aria-label="workshop"
+          style="background-image: url('./assets/images/cta-bg.png')"
+        >
+          <div class="container">
+            <figure class="cta-banner">
+              <img
+                src="./assets/images/9.webp"
+                width="580"
+                height="380"
+                loading="lazy"
+                alt="cta banner"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="cta-content">
+              <p class="section-subtitle">Còn chần chừ gì mà không...</p>
+
+              <h2 class="h2 section-title">Xách Balo Và đi...</h2>
+
+              <p class="section-text">
+                Nhập học ngay hôm nay, nơi<em><b> thiên tài </b></em>hội tụ, nơi các em sẽ được giáo dục toàn diện...
+              </p>
+
+              <a
+                href="menu/form.html"
+                target="_blank"
+                class="btn btn-secondary"
+              >
+                <span class="span">Đăng ký ngay tại đây</span>
+
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #NEWSLETTER
+      -->
+
+        <section
+          class="section newsletter"
+          id="admission"
+          aria-label="newsletter"
+          style="background-image: url('./assets/images/newsletter-bg.jpg')"
+        >
+          <div class="container">
+            <p class="section-subtitle">
+              Nếu thắc mắc hãy để chúng tôi tư vấn cho bạn
+            </p>
+
+            <h2 class="h2 section-title">
+              Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất...
+            </h2>
+
+            <form
+              action="https://formspree.io/f/xjvqrygn"
+              method="POST"
+              class="newsletter-form"
+            >
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  name="phone_number"
+                  aria-label="tel"
+                  placeholder="Nhập Email hoặc số điện thoại"
+                  required
+                  class="email-field"
+                />
+
+                <ion-icon
+                  name="mail-open-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <span class="span">Gửi ngay</span>
+
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </button>
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo">PĐP Hight School</a>
+
+            <p class="section-text">
+              Ngôi trường tốt nhất để dạy học sinh về tầm quan trọng của nền giáo dục và trao quyền cho cuộc sống, tầm nhìn và năng suất chung của các em với những giáo viên tuyệt vời.
+            </p>
+
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://web.facebook.com/tuoitrepdp"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/tuoitrpdp/"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Khám phá</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Chúng tôi</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Tuyển sinh</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Đội ngũ giáo viên</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Giải thưởng</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Học phí</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Liên kết tới...</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Nội quy cá nhân</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Quy định lớp học</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Quy định trường học</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Chính sách nhà trường</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Contact Info</p>
+            </li>
+
+            <li class="footer-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+              <address class="footer-link">
+                Đăk Song - Đăk Nông
+              </address>
+            </li>
+
+            <li class="footer-item">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+84345335303" class="footer-link"
+                >0345335303</a
+              >
+            </li>
+
+            <li class="footer-item">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <a href="levandaat@gmail.com" class="footer-link"
+                >levandaat@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            Copyright 2025 🖇PĐP 📚 Hight School. All Rights Reserved by Coder:
+            <a
+              href="https://web.facebook.com/leevawnddatj"
+              target="_blank"
+              class="copyright-link"
+              > LeVanDat</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="Back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
