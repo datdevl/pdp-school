@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.7;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #4285F4;
+        }
+
+        .square {
+            width: 40px;
+            height: 40px;
+            background: #FBBC05;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #34A853;
+        }
+
+        .line {
+            width: 60px;
+            height: 5px;
+            background: #EA4335;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            width: 450px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #4285F4;
+            box-shadow: 0px 0px 8px rgba(66, 133, 244, 0.5);
+        }
+
+        button {
+            background: #4285F4;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #3367D6;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background"></div>
+    <div class="container">
+        <h2>Đăng Ký Học THPT Tại Trường: THPT <u>Phan Đình Phùng</u></h2>
+        <form id="registrationForm">
+            <input type="text" id="name" placeholder="Họ và tên" required>
+            <input type="date" id="dob" required>
+            <input type="text" id="currentClass" placeholder="Lớp đang theo học, ví dụ: 9A1" required>
+            <select id="class" required>
+                <option value="">Chọn lớp bạn muốn học</option>
+                <option value="10A1">Lớp 10A1</option>
+                <option value="10A2">Lớp 10A2</option>
+                <option value="10A3">Lớp 10A3</option>
+                <option value="10A4">Lớp 10A4</option>
+                <option value="10A5">Lớp 10A5</option>
+            </select>
+            <input type="tel" id="phone" placeholder="Số điện thoại" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Gửi Đăng Ký</button>
+        </form>
+    </div>
+    
+    <script>
+        function createShapes() {
+            const container = document.getElementById("background");
+            const shapes = ['circle', 'square', 'triangle', 'line'];
+            
+            for (let i = 0; i < 20; i++) {
+                let shape = document.createElement("div");
+                shape.classList.add("shape", shapes[Math.floor(Math.random() * shapes.length)]);
+                shape.style.top = Math.random() * 100 + "vh";
+                shape.style.left = Math.random() * 100 + "vw";
+                shape.style.transform = `rotate(${Math.random() * 360}deg)`;
+                container.appendChild(shape);
+            }
+        }
+        createShapes();
+    </script>
+</body>
+</html>
