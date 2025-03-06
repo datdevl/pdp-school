@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PĐP Hight School - Official Website</title>
+    <title>Phan Dinh Phung Hight School - Official Website</title>
 
     <!-- 
     - favicon
@@ -204,7 +204,7 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
                 height="500"
                 loading="lazy"
                 alt="hero image"
-                class="w-100"
+                class="w-101"
               />
 
               <img
@@ -223,6 +223,15 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
                 loading="lazy"
                 aria-hidden="true"
                 class="abs-img abs-img-2"
+              />
+
+              <img
+                src="./assets/images/03-02.jpg"
+                width="500"
+                height="500"
+                loading="lazy"
+                alt="hero image"
+                class="dcs"
               />
             </figure>
           </div>
@@ -517,7 +526,7 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
           style="background-image: url('./assets/images/course-bg.jpg')"
         >
           <div class="container">
-            <p class="section-subtitle">Popular Classes</p>
+            <p class="section-subtitle">SOCIAL ACTIVITY</p>
 
             <h2 class="h2 section-title">Hoạt động của nhà trường</h2>
 
@@ -928,7 +937,7 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
             </a>
             <iframe src="http://c3phandinhphung.daknong.edu.vn/chuyen-muc/tin-tuc-hoat-dong" height="450" width="100%" style=
             "   
-            border: 4px solid #3498db; /* Viền màu xanh dương */
+            border: 4px solid #ff03f2; /* Viền màu xanh dương */
             border-radius: 12px; /* Bo tròn góc */
             box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
             padding: 5px; /* Khoảng cách bên trong viền */
@@ -949,9 +958,10 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
         >
           <div class="container">
             <figure class="cta-banner">
+              <p class="image-caption">HỌC KHÔNG CHƠI ĐÁNH RƠI TUỔI TRẺ, CHƠI KHÔNG HỌC BÁN RẺ TƯƠNG LAI...TỚI VỚI CHÚNG TÔI BẠN SẼ CÓ CẢ 2!</p>
               <img
                 src="./assets/images/9.webp"
-                width="580"
+                width="500"
                 height="380"
                 loading="lazy"
                 alt="cta banner"
@@ -1204,7 +1214,7 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
     </footer>
 
     <!-- 
-    - #BACK TO TOP
+    - #BACK TO TOP quay lại đầu trang
   -->
 
     <a
@@ -1232,5 +1242,30 @@ Tháng 7 năm 2010, căn cứ vào tình hình thực tế của địa phương
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const caption = document.querySelector(".image-caption");
+      
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+      
+        function handleScroll() {
+          if (isElementInViewport(caption)) {
+            caption.classList.add("typing-active");
+            window.removeEventListener("scroll", handleScroll);
+          }
+        }
+      
+        window.addEventListener("scroll", handleScroll);
+      });
+      </script>
+      
   </body>
 </html>
