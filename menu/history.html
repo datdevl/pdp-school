@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kỷ Yếu Thời HS</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      body {
+        background-color: #0a0a0a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .circle,
+      .square,
+      .triangle {
+        position: absolute;
+        animation: rotateShape 5s linear infinite;
+      }
+
+      .circle {
+        width: 80px;
+        height: 80px;
+        background-color: #ffcc00;
+        border-radius: 50%;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: #00ccff;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%) rotate(45deg);
+        animation-delay: 1s;
+      }
+
+      .triangle {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid #ff0066;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation-delay: 2s;
+      }
+
+      @keyframes rotateShape {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg) scale(1.2);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Hàng nút lớp */
+      .class-buttons {
+        position: absolute;
+        top: 20px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .class-btn {
+        background-color: #ffffff;
+        color: #000;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .class-btn:hover {
+        background-color: #ffcc00;
+        transform: translateY(-3px);
+      }
+
+      /* Nút âm thanh */
+      .audio-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+      }
+
+      .audio-button img {
+        width: 28px;
+        height: 28px;
+      }
+
+      /* Ẩn iframe YouTube */
+      #youtubePlayer {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle"></div>
+      <div class="square"></div>
+      <div class="triangle"></div>
+    </div>
+
+    <!-- Dãy nút lớp -->
+    <div class="class-buttons">
+      <button class="class-btn" onclick="navigateTo('12A1')">12A1</button>
+      <button class="class-btn" onclick="navigateTo('12A2')">12A2</button>
+      <button class="class-btn" onclick="navigateTo('12A3')">12A3</button>
+      <button class="class-btn" onclick="navigateTo('12A4')">12A4</button>
+      <button class="class-btn" onclick="navigateTo('12A5')">12A5</button>
+    </div>
+
+    <!-- Nút phát nhạc -->
+    <button class="audio-button" onclick="toggleAudio()">
+      <img
+        id="audioIcon"
+        src="https://cdn-icons-png.flaticon.com/512/25/25682.png"
+        alt="Âm thanh"
+      />
+    </button>
+
+    <!-- Nhúng YouTube -->
+    <iframe
+      id="youtubePlayer"
+      width="0"
+      height="0"
+      src="/menu/Những Bản Nhạc Tuổi Học Trò - Nhạc Chia Tay Cuối Cấp - Hạ Nắng.mp3"
+      frameborder="0"
+      allow="autoplay"
+    ></iframe>
+
+    <script>
+      let isPlaying = true; // Mặc định phát nhạc khi vào trang
+
+      function toggleAudio() {
+        let player = document.getElementById("youtubePlayer");
+        let icon = document.getElementById("audioIcon");
+
+        if (isPlaying) {
+          player.src = ""; // Tạm dừng nhạc
+          icon.src = "https://cdn-icons-png.flaticon.com/512/727/727245.png"; // Icon tắt
+        } else {
+          player.src =
+            "https://www.youtube.com/embed/3PkCHDcCLdU?autoplay=1&loop=1&playlist=3PkCHDcCLdU"; // Phát lại nhạc
+          icon.src = "https://cdn-icons-png.flaticon.com/512/25/25682.png"; // Icon bật
+        }
+        isPlaying = !isPlaying;
+      }
+
+      // Điều hướng từng nút đến trang khác nhau
+      function navigateTo(className) {
+        const links = {
+          "12A1": "./class/12A1.html",
+          "12A2": "./class/12A2.html",
+          "12A3": "./class/12A3.html",
+          "12A4": "./class/12A4.html",
+          "12A5": "./class/12A5.html",
+        };
+        window.location.href = links[className] || "/";
+      }
+    </script>
+  </body>
+</html>
