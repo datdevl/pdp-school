@@ -168,12 +168,16 @@ body {
 
 .container { 
   padding-inline: 15px; 
+  /*display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang 
+    align-items: center;  Căn giữa theo chiều dọc */
+
 }
 
 .abs-img { display: none; }
 
 .section-subtitle {
-  color: var(--ultramarine-blue);
+  color: var(--ultramarine-bluez);
   text-transform: uppercase;
   font-weight: var(--fw-800);
   letter-spacing: 2px;
@@ -206,7 +210,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px 30px;
-  border-radius: var(--radius-6);
+  border-radius: var(--radius-6);  !--
   transition: var(--transition-1);
 }
 
@@ -227,7 +231,6 @@ body {
   color: var(--white);
 }
 
-.w-100 { width: 100%; }
 
 .section { padding-block: var(--section-padding); }
 
@@ -239,7 +242,7 @@ body {
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* làm ảnh nét */
 }
 
 
@@ -273,8 +276,8 @@ body {
 }
 
 .logo {
-  color:red;
-  font-size: 2.4rem;
+  color:rgb(255, 0, 0);
+  font-size: 3.4rem;
   font-weight: var(--fw-800);
 }
 
@@ -593,7 +596,7 @@ body {
 .course-card .card-banner img { transition: var(--transition-2); }
 
 .course-card:is(:hover, :focus-within) .card-banner img { transform: scale(1.1); }
-
+/* sẽ thu phóng ảnh khi di chuyển đến */
 .course-card .card-actions {
   display: flex;
   justify-content: space-between;
@@ -611,10 +614,10 @@ body {
   font-size: var(--fs-6);
   font-weight: var(--fw-600);
   padding: 4px 12px;
-  border-radius: var(--radius-4);
+  border-radius: var(--radius-4); 
 }
 
-.course-card .whishlist-btn {
+.course-card .whishlist-btn { /* thuộc tính whishlist-btn trái tim */
   background-color: var(--space-cadet_20);
   color: var(--white);
   font-size: 18px;
@@ -717,9 +720,9 @@ body {
   border-radius: var(--radius-6);
   overflow: hidden;
   margin-block-end: 30px;
-  width: 700px; /* Hoặc đặt kích thước cố định như width: 800px; */
+  width: 500px; /* Hoặc đặt kích thước cố định như width: 800px; */
   max-width: 1200px; /* Để tránh quá to trên màn hình lớn */
-  height: 700px;
+  height: 550px;
   
 }
 
@@ -1206,24 +1209,53 @@ body {
     display: block;
     position: absolute;
   }
-
   .hero-banner {
     position: relative;
-    padding-inline-end: 50px;
-    margin-block-start: 180px;
+    left:10px;
+    padding-inline-end: 5px; /* Giảm khoảng cách để hình ảnh cân đối hơn */
+    margin-block-start: 250px; /* Hạ xuống một chút để không bị che */
   }
-
+  
   .hero .abs-img-1 {
-    width: 250px;
-    right: -100px;
-    top: -60px;
-  }
+    width: 420px; /* Chiều rộng */
+    height: 420px; /* Chiều cao bằng với chiều rộng để ảnh tròn */
+    left: 360px; /* Điều chỉnh vị trí */
+    top: -90px; /* Hạ xuống một chút để căn chỉnh */
+    border: 10px solid rgb(255, 255, 255); /* Viền trắng */
+    border-radius: 100%; /* Biến ảnh thành hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
 
   .hero .abs-img-2 {
-    top: -180px;
-    right: 80px;
+    top: -150px; /* Hạ xuống một chút để không bị lệch */
+    right: 100px; /* Điều chỉnh sang phải để đẹp hơn */
+    border-radius: 50%; /* Biến thành hình tròn */
+    width: 460px; /* Giữ nguyên kích thước */
+    height: 460px; 
+    object-fit: cover; /* Đảm bảo hình ảnh hiển thị đẹp */
+    border: 15px solid white;
   }
-
+  .w-101 { 
+    position: relative; /* Đảm bảo có thể di chuyển */
+    top: 50px; /* Tăng giá trị để đẩy xuống dưới */
+    left:55px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%; 
+    border: 15px solid rgb(255, 255, 255);
+    object-fit: cover;
+}
+ .dcs { /* ảnh nhỏ */
+  position: relative; /* Đảm bảo có thể di chuyển */
+  width: 200px; /* Chiều rộng */
+  height: 200px; /* Chiều cao bằng với chiều rộng để ảnh tròn */
+  left: 530px; /* Điều chỉnh vị trí */
+  top: -190px; /* Hạ xuống một chút để căn chỉnh */
+  border: 10px solid rgb(255, 255, 255); /* Viền trắng */
+  border-radius: 50%; /* Biến ảnh thành hình tròn */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
 
 
   /**
@@ -1361,7 +1393,7 @@ body {
    * HERO
    */
 
-  .hero .abs-img-1 { width: max-content; }
+ 
 
   .hero .abs-img-2 { right: 120px; }
 
@@ -1395,4 +1427,42 @@ body {
 
   .footer-top { padding-block: 120px 80px; }
 
+}
+.cta-banner {
+  position: relative;
+  display: inline-block;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 10px; /* Điều chỉnh vị trí */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Nền mờ */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 15px; /* Tăng kích thước chữ */
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  white-space: normal; /* Cho phép xuống hàng */
+  display: block; /* Hiển thị khối */
+  max-width: 80%; /* Giới hạn chiều rộng */
+  text-align: center; /* Căn giữa nội dung */
+  word-wrap: break-word; /* Xuống hàng khi quá dài */
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
+.typing-active {
+  animation: typing 3s steps(30, end) forwards, blinkCursor 0.75s infinite;
+  opacity: 1;
 }
