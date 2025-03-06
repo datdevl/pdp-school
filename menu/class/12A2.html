@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ảnh lớp 12A2</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow-y: auto;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 80px;
+      }
+
+      .photo {
+        position: relative;
+        width: 350px;
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        animation: floatPhoto 6s ease-in-out infinite;
+        display: none; /* Ẩn mặc định, hiển thị theo nhóm */
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .photo:hover img {
+        transform: scale(1.15);
+      }
+
+      @keyframes floatPhoto {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0);
+        }
+        25% {
+          transform: translateY(-15px) rotate(3deg);
+        }
+        75% {
+          transform: translateY(15px) rotate(-3deg);
+        }
+      }
+
+      h1 {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 25px;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+        z-index: 10;
+      }
+
+      .snowflake {
+        position: fixed;
+        top: -30px;
+        color: #fff;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        pointer-events: none;
+        z-index: 9999;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          opacity: 1;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(100vh) translateX(calc(50px * var(--direction)));
+        }
+      }
+      /* Nút điều khiển nhóm ảnh */
+      .button-container {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10000;
+      }
+
+      .group-button {
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+      }
+
+      .group-button:hover {
+        background-color: #00ccff;
+      }
+
+      .group-button.active {
+        background-color: #00ccff;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nút điều khiển nhóm ảnh -->
+    <div class="button-container">
+      <button class="group-button active" onclick="showGroup(1)">
+        ALBUM 1
+      </button>
+      <button class="group-button" onclick="showGroup(2)">ALBUM 2</button>
+      <button class="group-button" onclick="showGroup(3)">ALBUM 3</button>
+    </div>
+
+    <div class="container">
+      <!-- Nhóm 1: Ảnh 1-17 -->
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/1.jpg" alt="Photo 1" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/2.jpg" alt="Photo 2" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/3.jpg" alt="Photo 3" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/4.jpg" alt="Photo 4" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/5.jpg" alt="Photo 5" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/6.jpg" alt="Photo 6" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/7.jpg" alt="Photo 7" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/8.jpg" alt="Photo 8" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/9.jpg" alt="Photo 9" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/10.jpg" alt="Photo 10" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/11.jpg" alt="Photo 11" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/12.jpg" alt="Photo 12" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/13.jpg" alt="Photo 13" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/14.jpg" alt="Photo 14" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/15.jpg" alt="Photo 15" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/16.jpg" alt="Photo 16" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/17.jpg" alt="Photo 17" />
+      </div>
+      <div class="photo group-1">
+        <img loading="lazy" src="./img-class/18.jpg" alt="Photo 18" />
+      </div>
+      <!-- Nhóm 2: Ảnh 18-34 -->
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/19.jpg" alt="Photo 19" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/20.jpg" alt="Photo 20" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/21.jpg" alt="Photo 21" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/22.jpg" alt="Photo 22" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/23.jpg" alt="Photo 23" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/24.jpg" alt="Photo 24" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/25.jpg" alt="Photo 25" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/26.jpg" alt="Photo 26" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/27.jpg" alt="Photo 27" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/28.jpg" alt="Photo 28" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/29.jpg" alt="Photo 29" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/30.jpg" alt="Photo 30" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/31.jpg" alt="Photo 31" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/32.jpg" alt="Photo 32" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/33.jpg" alt="Photo 33" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/34.jpg" alt="Photo 34" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/35.jpg" alt="Photo 35" />
+      </div>
+      <div class="photo group-2">
+        <img loading="lazy" src="./img-class/36.jpg" alt="Photo 36" />
+      </div>
+      <!-- Nhóm 3: Ảnh 35-50 -->
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/37.jpg" alt="Photo 37" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/38.jpg" alt="Photo 38" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/39.jpg" alt="Photo 39" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/40.jpg" alt="Photo 40" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/41.jpg" alt="Photo 41" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/42.jpg" alt="Photo 42" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/43.jpg" alt="Photo 43" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/44.jpg" alt="Photo 44" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/45.jpg" alt="Photo 45" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/46.jpg" alt="Photo 46" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/47.jpg" alt="Photo 47" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/48.jpg" alt="Photo 48" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/49.jpg" alt="Photo 49" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/50.jpg" alt="Photo 50" />
+      </div>
+      <div class="photo group-3">
+        <img loading="lazy" src="./img-class/51.jpg" alt="Photo 51" />
+      </div>
+      <h1>12A2_KHOẢNH KHẮC ĐẸP CỦA TUỔI HỌC TRÒ</h1>
+    </div>
+    <script>
+      // Hiệu ứng tuyết rơi tối ưu
+      let snowflakesCount = 0;
+      const maxSnowflakes = 50;
+
+      function createSnowflake() {
+        if (snowflakesCount >= maxSnowflakes) return;
+
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.innerHTML = "❄";
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.setProperty(
+          "--direction",
+          Math.random() > 0.5 ? 1 : -1
+        );
+        document.body.appendChild(snowflake);
+        snowflakesCount++;
+
+        snowflake.addEventListener("animationend", () => {
+          snowflake.remove();
+          snowflakesCount--;
+        });
+      }
+
+      let lastTime = 0;
+      const snowInterval = 500;
+      function animateSnow(timestamp) {
+        if (timestamp - lastTime >= snowInterval) {
+          createSnowflake();
+          lastTime = timestamp;
+        }
+        requestAnimationFrame(animateSnow);
+      }
+      requestAnimationFrame(animateSnow);
+
+      let isScrolling;
+      window.addEventListener("scroll", () => {
+        clearTimeout(isScrolling);
+        document.body.classList.add("scrolling");
+        isScrolling = setTimeout(() => {
+          document.body.classList.remove("scrolling");
+        }, 200);
+      });
+
+      const styleSheet = document.createElement("style");
+      styleSheet.textContent = `
+        .scrolling .snowflake {
+          animation-play-state: paused;
+        }
+      `;
+      document.head.appendChild(styleSheet);
+
+      // Điều khiển nhóm ảnh
+      function showGroup(groupNumber) {
+        const allPhotos = document.querySelectorAll(".photo");
+        const buttons = document.querySelectorAll(".group-button");
+
+        // Ẩn tất cả ảnh và bỏ class active từ các nút
+        allPhotos.forEach((photo) => (photo.style.display = "none"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        // Hiển thị ảnh của nhóm được chọn và thêm class active cho nút
+        const groupPhotos = document.querySelectorAll(`.group-${groupNumber}`);
+        groupPhotos.forEach((photo) => (photo.style.display = "block"));
+        buttons[groupNumber - 1].classList.add("active");
+
+        // Cuộn về đầu trang khi chuyển nhóm
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Hiển thị nhóm 1 mặc định khi tải trang
+      showGroup(1);
+    </script>
+  </body>
+</html>
